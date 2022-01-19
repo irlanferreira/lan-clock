@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'montserrat';
+    src: url("fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: 'manrope';
+    src: url('fonts/Manrope-Medium.ttf');
+}
+
+:root{ /*variáveis*/
+    --cinza: #28292c;
+    --fonte1: 'manrope';
+    --fonte2: 'montserrat';
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    font-family: var(--fonte1), Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cinza);
+    
+}
+
+div#display {
+    padding: 20vh;
+    text-align: center;
+    font-size: 6vw;
+}
+
+div#divabas{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 0px 0px 0px;
+}
+
+ul#abas{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0px;
+}
+
+ul#abas li{
+    margin: 0px 20px;
+}
+
+a {
+    text-decoration: none;
+}
