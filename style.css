@@ -31,26 +31,48 @@ body {
 div#display {
     padding: 20vh;
     text-align: center;
-    font-size: 6vw;
+    font-size: 5.7vw;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.356);
+}
+p#horario {
+    font-family: var(--fonte2);
+    text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.377);
 }
 
 div#divabas{
-    border-style: solid;
-    border-color: black;
-    border-width: 2px 0px 0px 0px;
+    
 }
 
 ul#abas{
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 20px 0px;
+    padding: 0px 0px 40px 0px;
 }
 
 ul#abas li{
     margin: 0px 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+}
+li#selecionado {
+    background: linear-gradient(to top, #28292c, #2f3033);
 }
 
 a {
     text-decoration: none;
+}
+@media (max-width: 550px){
+    ul#abas {
+        flex-direction: column;
+    }
+    li#selecionado {
+        background: linear-gradient(to bottom, #28292c, #2f3033);
+    }
+    ul#abas li{
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.13);
+    }
 }
