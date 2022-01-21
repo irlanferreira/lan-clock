@@ -79,6 +79,9 @@ footer a{
     color: rgba(255, 255, 255, 0.26);
 }
 @media (max-width: 550px){
+    div#display{
+        padding: 20vw;
+    }
     ul#abas {
         flex-direction: column;
     }
