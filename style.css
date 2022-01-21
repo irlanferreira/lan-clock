@@ -29,7 +29,7 @@ body {
 }
 
 div#display {
-    padding: 20vw;
+    padding: 10vw;
     text-align: center;
     font-size: 5.7vw;
     background-size: cover;
@@ -64,6 +64,19 @@ li#selecionado {
 
 a {
     text-decoration: none;
+}
+
+footer {
+    margin: 4vw 0px 0px 0px;
+    text-align: center;
+}
+footer p {
+    margin: 20px 0px;
+    font-family: var(--fonte2);
+    color: rgba(255, 255, 255, 0.123);
+}
+footer a{
+    color: rgba(255, 255, 255, 0.26);
 }
 @media (max-width: 550px){
     ul#abas {
