@@ -67,11 +67,11 @@ a {
 }
 
 footer {
-    margin: 4vw 0px 0px 0px;
+    margin: 1vw 0px 0px 0px;
     text-align: center;
 }
 footer p {
-    margin: 20px 0px;
+    margin-bottom: 10px;
     font-family: var(--fonte2);
     color: rgba(255, 255, 255, 0.123);
 }
