@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'montserrat';
+    src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: 'manrope';
+    src: url('../fonts/Manrope-Medium.ttf');
+}
+
+:root{ /*variáveis*/
+    --cinza: #28292c;
+    --fonte1: 'manrope';
+    --fonte2: 'montserrat';
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    font-family: var(--fonte1), Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cinza);
+    
+}
+
+div#display {
+    padding: 10vw;
+    text-align: center;
+    font-size: 5.7vw;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.356);
+}
+p#numeracao {
+    font-family: var(--fonte2);
+    text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.377);
+}
+
+div#botoes {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.botao{
+    color: black;
+    padding: 0.5vw 3vw;
+    border-style: none;
+    border-radius: 4px;
+    margin: 0px 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.384);
+}
+#btniniciar {
+    background-color: #9fdf9f;
+}
+#btnpausar {
+    background-color: rgb(202, 137, 137);
+}
+#btnsalvar{
+    background-color: rgb(201, 201, 132);
+}
+#btnzerar {
+    background-color: rgb(219, 219, 219);
+}
+
+ul#abas{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0px 0px 40px 0px;
+}
+
+ul#abas li{
+    margin: 0px 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+}
+li#selecionado {
+    background: linear-gradient(to top, #28292c, #2f3033);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    margin: 1vw 0px 0px 0px;
+    text-align: center;
+}
+footer p {
+    margin-bottom: 10px;
+    font-family: var(--fonte2);
+    color: rgba(255, 255, 255, 0.123);
+}
+footer a{
+    color: rgba(255, 255, 255, 0.26);
+}
+@media (max-width: 550px){
+    div#display{
+        padding: 20vw;
+    }
+    .botao{
+        margin: 0px 10px;
+    }
+    ul#abas {
+        flex-direction: column;
+    }
+    li#selecionado {
+        background: linear-gradient(to bottom, #28292c, #2f3033);
+    }
+    ul#abas li{
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.13);
+    }
+}
+@media (max-width: 750px){
+    div#display{
+        font-size: 10vw;
+    }
+}
