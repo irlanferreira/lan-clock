@@ -1,7 +1,9 @@
 numeros = document.querySelector('p#numeracao')
+divSalvos = document.querySelector('div#salvos')
 hh = mm = ss = 0
 contando = false
 numeroAtual = 0
+mostrarSalvos()
 
 class ContagemSalva {
     constructor(tempodt){
@@ -34,7 +36,6 @@ function contagem(){
 }
 function iniciar(){
     if(contando == false){
-        numeros.innerHTML = '00:00:00'
         contagemIntervalo = setInterval(contagem, 1000)
         contando = true
     }
@@ -51,16 +52,43 @@ function zerar(){
     numeros.innerHTML = "00:00:00"
 }
 function salvar(){
+    divSalvos.innerHTML = ''
     let dado = new ContagemSalva(numeroAtual)
     if(typeof(numeroAtual) == 'number'){
         alert("Você ainda não iniciou uma contagem. Não é possível salvar.")
     }else if(localStorage.getItem('listaSalvos')){
         listaSalvos = JSON.parse(localStorage.getItem('listaSalvos'))
-        listaSalvos.push(dado)
+        listaSalvos.unshift(dado)
         localStorage.setItem('listaSalvos', JSON.stringify(listaSalvos))
     }else{
         lista = []
-        lista.push(dado)
+        lista.unshift(dado)
         localStorage.setItem('listaSalvos', JSON.stringify(lista))
+    }
+    mostrarSalvos()
+}
+function deletarItem(i){
+    let listaSalvos = JSON.parse(localStorage.getItem('listaSalvos'))
+    console.log(listaSalvos)
+    listaSalvos.splice(i, 1)
+    console.log(listaSalvos)
+    localStorage.setItem('listaSalvos', JSON.stringify(listaSalvos))
+
+    divSalvos.innerHTML = ''
+    mostrarSalvos()
+}
+function mostrarSalvos(){
+    let listaSalvos = JSON.parse(localStorage.getItem('listaSalvos'))
+    for(i in listaSalvos){
+        divSalvos.innerHTML += `<div id="item">
+        <div id="tempo">
+            <p>${listaSalvos[i].tempo}</p>
+        </div>
+        <div style="align-self: flex-end;"><img src="../imagens/lixo.png" alt="Deletar" style="margin-bottom: 33px; margin-left: 65px;" onclick="deletarItem(${i})"></div>
+        <div>
+            <p>${listaSalvos[i].data}</p>
+            <p>às ${listaSalvos[i].horario}</p>
+        </div>
+    </div>`
     }
 }

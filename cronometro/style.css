@@ -29,7 +29,7 @@ body {
 }
 
 div#display {
-    padding: 10vw;
+    padding: 7vw;
     text-align: center;
     font-size: 5.7vw;
     background-size: cover;
@@ -79,6 +79,7 @@ ul#abas li{
     padding: 30px;
     text-align: center;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    border-radius: 0px 0px 5px 5px;
 }
 li#selecionado {
     background: linear-gradient(to top, #28292c, #2f3033);
@@ -86,6 +87,30 @@ li#selecionado {
 
 a {
     text-decoration: none;
+}
+div#salvos{
+    margin: auto;
+    max-width: 400px;
+}
+div#item{
+    height: 100px;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    background-color: #353535;
+    border-radius: 5px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.384);
+}
+div#salvos img {
+ width: 25px;
+}
+div#item p {
+    margin: 10px 20px;
+}
+div#tempo p {
+    font-size: 1.7em;
 }
 
 footer {
