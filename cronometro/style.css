@@ -81,6 +81,10 @@ ul#abas li{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
     border-radius: 0px 0px 5px 5px;
 }
+ul#abas a{
+    flex-grow: 1;
+    flex-basis: 0;
+}
 li#selecionado {
     background: linear-gradient(to top, #28292c, #2f3033);
 }
@@ -91,6 +95,12 @@ a {
 div#salvos{
     margin: auto;
     max-width: 400px;
+}
+button#apagarTodos {
+    display: block;
+    margin: auto;
+    padding: 8px 30px;
+    background-color: rgb(165, 91, 91);
 }
 div#item{
     height: 100px;

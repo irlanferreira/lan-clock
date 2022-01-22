@@ -74,10 +74,10 @@ function deletarItem(i){
     console.log(listaSalvos)
     localStorage.setItem('listaSalvos', JSON.stringify(listaSalvos))
 
-    divSalvos.innerHTML = ''
     mostrarSalvos()
 }
 function mostrarSalvos(){
+    divSalvos.innerHTML = ''
     let listaSalvos = JSON.parse(localStorage.getItem('listaSalvos'))
     for(i in listaSalvos){
         divSalvos.innerHTML += `<div id="item">
@@ -91,4 +91,8 @@ function mostrarSalvos(){
         </div>
     </div>`
     }
+}
+function apagarTodos(){
+    localStorage.setItem('listaSalvos', JSON.stringify([]))
+    mostrarSalvos()
 }

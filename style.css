@@ -51,6 +51,10 @@ ul#abas{
     list-style: none;
     padding: 0px 0px 40px 0px;
 }
+ul#abas a{
+    flex-grow: 1;
+    flex-basis: 0;
+}
 
 ul#abas li{
     margin: 0px 20px;
