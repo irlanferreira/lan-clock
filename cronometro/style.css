@@ -32,8 +32,7 @@ div#display {
     padding: 7vw;
     text-align: center;
     font-size: 5.7vw;
-    background-size: cover;
-    background-position: center center;
+    background: linear-gradient(to bottom, #3c3d41, #28292c);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.356);
 }
 p#numeracao {
