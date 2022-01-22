@@ -1,0 +1,15 @@
+h1 {
+    margin-top: 15vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body {
+    background-color: #28292c;
+}
+a {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
