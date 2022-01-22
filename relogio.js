@@ -60,7 +60,7 @@ function definirImagem(div){
 
     if(hora > 4 && hora < 12){
         div.style.backgroundImage = `url('imagens/manha/manha${numeroImagem}.jpg')`
-    }else if(hora >= 12 && hora < 17){
+    }else if(hora >= 12 && hora < 18){
         div.style.backgroundImage = `url('imagens/tarde/tarde${numeroImagem}.jpg')`
     }else{
         div.style.backgroundImage = `url('imagens/noite/noite${numeroImagem}.jpg')`
