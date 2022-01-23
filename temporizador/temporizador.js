@@ -27,6 +27,13 @@ function contagem(){
                 console.log('cabou')
                 clearInterval(intervalo)
                 contando = false
+                if(window.Notification&&Notification.permission !== 'denied'){
+                    Notification.requestPermission(function(status){
+                        let n = new Notification('Lan Clock', {
+                            body:'O temporizador zerou.'
+                        })
+                    })
+                }
                 redefinir()
             }else{
                 minuto = 59
