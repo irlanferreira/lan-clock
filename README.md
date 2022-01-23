@@ -1,1 +1,2 @@
 Um simples projeto de relógio ditigal com cronômetro e temporizador.
+<a href="http://127.0.0.1:5500/index.html">GitHub page</a>
