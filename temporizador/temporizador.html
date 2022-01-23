@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LanClock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Em desenvolvimento :)</h1>
-    <a href="../index.html">
-        <p>Voltar</p>
-    </a>
+    <div id="display">
+        <div id="divTempo">
+            <input type="number" name="" id="inputHora" class="inputNumero" value="00" min="00" max="59" onfocusout="formatar(0)">
+            <input type="number" name="" id="inputMinuto" class="inputNumero" value="00" min="00" max="59" onfocusout="formatar(1)">
+            <input type="number" name="" id="inputSegundo" class="inputNumero" value="00" min="00" max="59" onfocusout="formatar(2)">
+        </div>
+        <div id="divBotoes">
+            <button class="botao" id="btniniciar" onclick="iniciar()">Iniciar</button>
+            <button class="botao" id="btnpausar" onclick="pausar()">Pausar</button>
+            <button class="botao" id="btnredefinir" onclick="redefinir()">Redefinir</button>
+        </div>
+    </div>
+    <div id="divabas">
+        <ul id="abas">
+            <a href="../index.html" rel="next" target="_self"><li>Relógio</li></a>
+            <a href="../cronometro/cronometro.html" rel="next" target="_self"><li>Cronômetro</li></a>
+            <a href="#" rel="next" target="_self"><li id="selecionado">Temporizador</li></a>
+        </ul>
+    </div>
+    <footer id="creditos">
+        <p>Desenvolvido por - <a href="https://github.com/irlanferreira" rel="external" target="_blank">Irlan</a></p>
+    </footer>
+    <script src="temporizador.js"></script>
 </body>
 </html>
