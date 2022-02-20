@@ -69,3 +69,5 @@ function pausar(){
 function redefinir(){
     window.location.reload()
 }
+
+var Hour = new Date().getHours()
